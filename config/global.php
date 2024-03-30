@@ -1,9 +1,9 @@
 <?php
 
 return [
-	'contact_no' => '',
-	'phone' => '',
-	'company_address' => '',
+	'contact_no' => '+91-987-657 3556',
+	'email' => 'info@studiosunlife.com',
+	'company_address' => 'Sakinaka, Andheri',
 	'SEND_CUSTOM_EMAIL' => TRUE,
 	'EMAIL_FROM' => env('MAIL_FROM_ADDRESS', 'singharjun93124@gmail.com'),
 	'EMAIL_FROM_NAME' => env('MAIL_FROM_NAME', 'Singh Arjun'),

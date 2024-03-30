@@ -59,7 +59,7 @@
                       </div>
                       <div class="text">
                         <span>Email Us</span>
-                        <a href="mailto:example@gmail.com">example@gmail.com</a>
+                        <a href="mailto:{{config('global.email')}}">{{config('global.email')}}</a>
                       </div>
                     </li>
                     <li>
@@ -68,7 +68,7 @@
                       </div>
                       <div class="text">
                         <span>Call Us</span>
-                        <a href="tel:+1(888)553-46-11">+1 (888) 553-46-11</a>
+                        <a href="tel:{{config('global.contact_no')}}">{{config('global.contact_no')}}</a>
                       </div>
                     </li>
                     <li>
@@ -77,7 +77,7 @@
                       </div>
                       <div class="text">
                         <span>Visit Us</span>
-                        <p>5687, Business Avenue, New York, USA 5687</p>
+                        <p>{{config('global.company_address')}}</p>
                       </div>
                     </li>
                   </ul>

@@ -44,7 +44,7 @@
             <div class="container">
                 <!-- navigation bar -->
                 <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="{{config('global.base_path')}}">
+                    <a class="navbar-brand" href="{{ config('global.base_path') }}">
                         <img src="{{ asset('frontend/images/logo.png') }}" alt="image">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -107,11 +107,11 @@
                         <!-- footer link 1 -->
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="abt_side">
-                                <div class="logo"> <img src="{{ asset('frontend/images/logo.png') }}"
-                                        alt="image"></div>
+                                <div class="logo"> <img src="{{ asset('frontend/images/logo.png') }}" alt="image">
+                                </div>
                                 <ul>
-                                    <li><a href="#">support@example.com</a></li>
-                                    <li><a href="#">+1-900-123 4567</a></li>
+                                    <li><a href="mailto:{{config('global.email')}}">{{config('global.email')}}</a></li>
+                                    <li><a href="tel:{{config('global.contact_no')}}">{{config('global.contact_no')}}</a></li>
                                 </ul>
                                 <ul class="social_media">
                                     <li><a href="#"><i class="icofont-facebook"></i></a></li>

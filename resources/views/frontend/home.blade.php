@@ -743,8 +743,8 @@
                 <div class="abt_side">
                   <div class="logo"> <img src="{{asset('frontend/images/logo.png')}}" alt="image" ></div>
                   <ul>
-                    <li><a href="#">support@example.com</a></li>
-                    <li><a href="#">+1-900-123 4567</a></li>
+                    <li><a href="mailto:{{config('global.email')}}">{{config('global.email')}}</a></li>
+                    <li><a href="tel:{{config('global.contact_no')}}">{{config('global.contact_no')}}</a></li>
                   </ul>
                   <ul class="social_media">
                       <li><a href="#"><i class="icofont-facebook"></i></a></li>
