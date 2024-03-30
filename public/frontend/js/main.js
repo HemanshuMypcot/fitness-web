@@ -1,3 +1,11 @@
+
+/*
+
+Project Name : Studio Sunlife JS
+
+Created By : Hemanshu Solanki from Mypcot
+
+*/
 // Open Sub Menu
 $('.drp_btn').click(function(){
   $(this).siblings('.sub_menu').slideToggle();
@@ -23,7 +31,7 @@ $('#frmae_slider').owlCarousel({
     autoplay: true,
     smartSpeed: 1500,
     nav:false,
-    dots: true, 
+    dots: true,
     responsive:{
         0:{
             items:1
@@ -43,7 +51,7 @@ $('#company_slider').owlCarousel({
     nav:false,
     autoplay: true,
     smartSpeed: 1500,
-    dots: true, 
+    dots: true,
     responsive:{
         0:{
             items:2
@@ -64,7 +72,7 @@ $('#testimonial_slider').owlCarousel({
     nav:false,
     autoplay: true,
     smartSpeed: 2500,
-    dots: true, 
+    dots: true,
     responsive:{
         0:{
             items:1
@@ -83,7 +91,7 @@ $('#screen_slider').owlCarousel({
     loop:true,
     margin:10,
     nav:false,
-    dots: true, 
+    dots: true,
     autoplay: true,
     smartSpeed: 2500,
     center: true,
@@ -159,7 +167,7 @@ window.addEventListener('scroll', function() {
           }
 
         });
-    });   
+    });
   }
 });
 
@@ -237,11 +245,11 @@ window.addEventListener('scroll', function() {
 
 $(window).on('resize', function() {
   if ($(window).width()<768) {
-      
+
     window.addEventListener('scroll', function() {
       var element = document.querySelector('.mobile_mockup');
       var position = element.getBoundingClientRect();
-    
+
       if(position.top < window.innerHeight && position.bottom >= 0) {
         $('.purple_backdrop').css("opacity", "1");
       }else{
@@ -250,13 +258,13 @@ $(window).on('resize', function() {
       }
     });
 
-  }  
+  }
   else {
 
     window.addEventListener('scroll', function() {
       var element = document.querySelector('.free_text');
       var position = element.getBoundingClientRect();
-    
+
       if(position.top < window.innerHeight && position.bottom >= 0) {
         $('.purple_backdrop').css("opacity", "1");
       }else{
@@ -319,15 +327,15 @@ $('.play-button').click(function(e){
 
 $('#close-video').click(function(e){
   $('#youtubevideo').attr('src', '');
-}); 
+});
 
 $(document).on('hidden.bs.modal','#myModal', function () {
   $('#youtubevideo').attr('src', '');
-}); 
+});
 
 
 
-// Close btn on click 
+// Close btn on click
 
 $(document).ready(function(){
   $('.navbar-toggler').click(function(){
