@@ -13,15 +13,14 @@ return [
 		"home" => [
 			"canonical" => env('BASE_URL'),
 			"title" => "Studio Sunlife",
-			"keywords" => "Savvy business solutions; contract management, TDS Management,
-			gst input credit matching system, payroll management system, foreign remittance system, einvoice system, ticketing system, dividend distribution system",
-			"description" => "Welcome to Savvy Business Solutions, we streamline operations with Contract and TDS Management. Optimize financial processes through a comprehensive GST Input Credit Matching System. Ensure accurate and efficient payroll processing with our Payroll Management System. Facilitate seamless foreign remittance and comply with regulations. Simplify invoicing and financial transactions with our E-invoice, Ticketing, and Dividend Distribution Systems"
+			"keywords" => "Studio Sunlife: fitness session, kickboxing, dancing, yoga",
+			"description" => "Welcome to Studio Sunlife for an invigorating fitness session where you can unleash your inner warrior with kickboxing, groove to the rhythm with dancing, and find inner peace through yoga. With a variety of classes tailored to your preferences, embark on a journey to holistic well-being and vitality"
 		],
 		"faq" => [
 			"canonical" => env('BASE_URL').'faq',
 			"title" => "FAQs",
-			"keywords" => "Contact, Get in touch, Feedback, Inquiries, Collaboration, Partnership, Communication.",
-			"description" => "Get in touch with us today through our Contact page. We value your feedback, inquiries, and collaboration opportunities."
+			"keywords" => "strength training, cardio, flexibility, endurance, resistance training, plyometrics, functional training, circuit training, and bodyweight exercises",
+			"description" => "Discover the cornerstone elements of fitness training with our essential training like strength, cardio, flexibility, and endurance. Explore dynamic workouts like resistance training, ensuring a well-rounded approach to achieving your fitness goals"
 		],
 		"contact_us" => [
 			"canonical" => env('BASE_URL').'contact_us',
@@ -38,8 +37,8 @@ return [
 		"terms_conditions" => [
 			"canonical" => env('BASE_URL').'terms',
 			"title" => "Terms & Conditions",
-			"keywords" => "Privacy, Policy, Data Protection, Personal Information, Confidentiality, Consent, Trust, Transparency, Compliance, Rights.",
-			"description" => "Your privacy matters to us. Welcome to our Privacy Policy page, where we outline how we collect, use, and safeguard your personal information. We are committed to protecting your data and ensuring its confidentiality."
+			"keywords" => " Agreement, user rights, liabilities, warranties, limitations of liability, indemnification, dispute resolution, governing law, intellectual property rights, privacy policy, cookies, termination, and updates",
+			"description" => "Explore the essential components of our Terms & Conditions, covering user rights, liabilities, warranties, and more. Navigate through key aspects such as dispute resolution, privacy policies, and updates to ensure clarity and transparency in our agreement"
 		]
 
 	]
