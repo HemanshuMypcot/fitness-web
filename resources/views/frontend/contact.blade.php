@@ -6,7 +6,7 @@
         <span class="banner_shape1"> <img src="{{asset('frontend/images/banner-shape1.png')}}" alt="image" > </span>
         <span class="banner_shape2"> <img src="{{asset('frontend/images/banner-shape2.png')}}" alt="image" > </span>
         <span class="banner_shape3"> <img src="{{asset('frontend/images/banner-shape3.png')}}" alt="image" > </span>
-        
+
         <div class="bred_text">
           <h1>Contact us</h1>
           <p>If you have an query, please get in touch with us, we will revert back quickly.</p>
@@ -17,8 +17,8 @@
           </ul>
         </div>
       </div>
-    </div>  
-    
+    </div>
+
 
     <!-- Contact Us Section Start -->
     <section class="contact_page_section">
@@ -29,36 +29,19 @@
                     <h2>Leave a <span>message</span></h2>
                     <p>Fill up form below, our team will get back soon</p>
                 </div>
-                  <form action="#">
+                  <form action="{{ route('contact_us') }}" method="post" id="contactForm">
+                    @csrf
                     <div class="form-group">
-                        <input type="text" placeholder="Name" class="form-control">
+                        <input type="text" placeholder="Name" name="name" class="form-control">
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Email" class="form-control">
+                        <input type="email" placeholder="Email" name="email" class="form-control">
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Company Name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <select class="form-control">
-                          <option value="">Country</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Phone" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Website" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" placeholder="Your message"></textarea>
-                    </div>
-                    <div class="form-group term_check">
-                      <input type="checkbox" id="term">
-                      <label for="term">I agree to receive emails, newsletters and promotional messages</label>
+                        <textarea class="form-control" name="message" placeholder="Your message"></textarea>
                     </div>
                     <div class="form-group mb-0">
-                      <button type="submit" class="btn puprple_btn">SEND MESSAGE</button>
+                        <button type="submit" class="btn puprple_btn" onclick="submitForm('contactForm','post');">SEND MESSAGE</button>
                     </div>
                   </form>
               </div>
@@ -66,9 +49,9 @@
                   <div class="icon"><img src="{{asset('frontend/images/contact_message_icon.png')}}" alt="image"></div>
                   <div class="section_title">
                     <h2>Have any <span>question?</span></h2>
-                    <p>If you have any question about our product, service, payment or company, Visit our <a href="faq.html">FAQs page.</a></p>
+                    <p>If you have any question about our product, service, payment or company, Visit our <a href="faq">FAQs page.</a></p>
                   </div>
-                  <a href="faq.html" class="btn puprple_btn">READ FAQ</a>
+                  <a href="faq" class="btn puprple_btn">READ FAQ</a>
                   <ul class="contact_info_list">
                     <li>
                       <div class="img">
@@ -115,29 +98,4 @@
     </section>
     <!-- Map Section End -->
 
-
-    <!-- News-Letter-Section-Start -->
-    <section class="newsletter_section">
-      <!-- container start -->
-      <div class="container">
-        <div class="newsletter_box">
-          <div class="section_title" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="100">
-            <!-- h2 -->
-            <h2>Subscribe newsletter</h2>
-            <!-- p -->
-            <p>Be the first to recieve all latest post in your inbox</p>
-          </div>
-          <form action="#" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="100">
-            <div class="form-group">
-              <input type="email" class="form-control" placeholder="Enter your email">
-            </div>
-            <div class="form-group">
-              <button class="btn">SUBMIT</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <!-- container end -->
-    </section>
-    <!-- News-Letter-Section-end -->
 @endsection

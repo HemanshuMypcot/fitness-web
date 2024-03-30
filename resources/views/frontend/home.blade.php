@@ -8,7 +8,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>APPER:: App Landing Page</title>
+  <title>{{ $tags['title'] }}</title>
 
   <!-- icofont-css-link -->
   <link rel="stylesheet" href="{{asset('frontend/css/icofont.min.css')}}">
@@ -18,11 +18,11 @@
   <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
   <!-- Aos-Style-link -->
   <link rel="stylesheet" href="{{asset('frontend/css/aos.css')}}">
-  <!-- Coustome-Style-link -->									
+  <!-- Coustome-Style-link -->
   <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
   <!-- Responsive-Style-link -->
-  <link rel="stylesheet" href="{{asset('frontend/css/responsive.css')}}">		
-  <!-- Favicon -->						
+  <link rel="stylesheet" href="{{asset('frontend/css/responsive.css')}}">
+  <!-- Favicon -->
   <link rel="shortcut icon" href="{{asset('frontend/images/logo_fevicon.png')}}" type="image/x-icon">
 
 </head>
@@ -43,7 +43,7 @@
       <div class="container">
       	<!-- navigation bar -->
         <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{{config('global.base_path')}}">
             <img src="{{asset('frontend/images/logo.png')}}" alt="image" >
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -60,7 +60,7 @@
             <ul class="navbar-nav ml-auto">
               <!-- secondery menu start -->
               <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="{{config('global.base_path')}}">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="faq">FAQs</a>
@@ -69,10 +69,10 @@
                 <a class="nav-link" href="contact_us">Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Privacy Policy</a>
+                <a class="nav-link" href="privacy">Privacy Policy</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Terms & Conditions</a>
+                <a class="nav-link" href="terms">Terms & Conditions</a>
               </li>
             </ul>
           </div>
@@ -83,7 +83,7 @@
     </header>
     <!-- Banner-Section-Start -->
     <section class="banner_section">
-      <!-- container start --> 
+      <!-- container start -->
       <div class="container">
       	<!-- vertical animation line -->
         <div class="anim_line">
@@ -105,7 +105,7 @@
               <!-- h1 -->
               <h1>Best way to <span>manage your customers.</span></h1>
               <!-- p -->
-              <p>Lorem Ipsum is simply dummy text of the printing and setting indus orem Ipsum has been the industrys.
+              <p>Optimize customer management with our intuitive fitness studio training session app.
               </p>
             </div>
             <!-- app buttons -->
@@ -337,51 +337,13 @@
 
                 <!-- p -->
                 <p>
-                  Studio Sunlife encapsulates innovation and vitality in every pixel, offering an immersive fitness experience like no other. With seamless design and intuitive functionality, it's your ultimate companion on the path to wellness, empowering you to thrive with every workout.
+                  Studio Sunlife encapsulates innovation and vitality in every pixel, offering an immersive fitness experience like no other. With seamless design and intuitive functionality, it's your ultimate companion on the path to wellness, empowering you to thrive with every workout. Studio Sunlife ensures the highest level of security for your data, safeguarding your privacy while you prioritize your wellness journey. Experience unparalleled support with Studio Sunlife's round-the-clock assistance, ensuring you never face your fitness journey alone.
                 </p>
               </div>
 
               <!-- UL -->
-              <ul class="app_statstic" id="counter" data-aos="fade-in" data-aos-duration="1500">
-                <li>
-                  <div class="icon">
-                    <img src="{{asset('frontend/images/download.png')}}" alt="image" >
-                  </div>
-                  <div class="text">
-                    <p><span class="counter-value" data-count="17">0</span><span>M+</span></p>
-                    <p>Download</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="icon">
-                    <img src="{{asset('frontend/images/followers.png')}}" alt="image" >
-                  </div>
-                  <div class="text">
-                    <p><span class="counter-value" data-count="08">0 </span><span>M+</span></p>
-                    <p>Followers</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="icon">
-                    <img src="{{asset('frontend/images/reviews.png')}}" alt="image" >
-                  </div>
-                  <div class="text">
-                    <p><span class="counter-value" data-count="2300">1500</span><span>+</span></p>
-                    <p>Reviews</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="icon">
-                    <img src="{{asset('frontend/images/countries.png')}}" alt="image" >
-                  </div>
-                  <div class="text">
-                    <p><span class="counter-value" data-count="150">0</span><span>+</span></p>
-                    <p>Countries</p>
-                  </div>
-                </li>
-              </ul>
+
               <!-- UL end -->
-              <a href="contact_us" class="btn puprple_btn" data-aos="fade-in" data-aos-duration="1500">START FREE TRIAL</a>
             </div>
           </div>
         </div>
@@ -432,7 +394,7 @@
                   <span>14 days free trial</span>
                   <p>Sign up free for App account. One account for all devices.</p>
                 </div>
-                <div class="step_number"> 
+                <div class="step_number">
                   <h3>02</h3>
                 </div>
                 <div class="step_img" data-aos="fade-right" data-aos-duration="1500">
@@ -444,7 +406,7 @@
               <li>
                 <div class="step_text" data-aos="fade-right" data-aos-duration="1500">
                   <h4>It’s done, enjoy the app</h4>
-                  <span>Have any questions check our <a href="#">FAQs</a></span>
+                  <span>Have any questions check our <a href="faq">FAQs</a></span>
                   <p>Get most amazing app experience,Explore and share the app</p>
                 </div>
                 <div class="step_number">
@@ -495,7 +457,7 @@
     <!-- How-It-Workes-Section-end -->
 
     <!-- Testimonial-Section start -->
-    <section class="row_am testimonial_section"> 
+    <section class="row_am testimonial_section">
       <!-- container start -->
       <div class="container">
         <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
@@ -547,7 +509,7 @@
                 <span class="designation">Careative inc</span>
               </div>
             </div>
-            
+
             <!-- user 3 -->
             <div class="item">
               <div class="testimonial_slide_box">
@@ -581,8 +543,6 @@
               <span><i class="icofont-star"></i></span>
               <p>5.0 / 5.0</p>
             </div>
-            <h3>2578</h3>
-            <a href="reviews.html">TOTAL USER REVIEWS <i class="icofont-arrow-right"></i></a>
           </div>
 
           <!-- avtar faces -->
@@ -594,240 +554,6 @@
       <!-- container end -->
     </section>
     <!-- Testimonial-Section end -->
-
-    <!-- Pricing-Section -->
-    <section class="row_am pricing_section" id="pricing">
-      <!-- container start -->
-      <div class="container">
-        <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-          <!-- h2 -->
-          <h2>Best & simple <span>pricing</span></h2>
-          <!-- p -->
-          <p>Discover Studio Sunlife Offering the best and simplest pricing solutions, <br> ensuring accessibility and transparency for all. Join us and streamline your fitness journey effortlessly.</p>
-        </div>
-        <!-- toggle button -->
-        <div class="toggle_block" data-aos="fade-up" data-aos-duration="1500">
-          <span class="month active">Monthly</span>
-          <div class="tog_block">
-            <span class="tog_btn"></span>
-          </div>
-          <span class="years">Yearly</span>
-          <span class="offer">50% off</span>
-        </div>
-
-        <!-- pricing box  monthly start -->
-        <div class="pricing_pannel monthly_plan active" data-aos="fade-up" data-aos-duration="1500">
-          <!-- row start -->
-          <div class="row">
-          	<!-- pricing box 1 -->
-            <div class="col-md-4">
-              <div class="pricing_block">
-                <div class="icon">
-                  <img src="{{asset('frontend/images/standard.png')}}" alt="image" >
-                </div>
-                <div class="pkg_name">
-                  <h3>Standard</h3>
-                  <span>For the basics</span>
-                </div>
-                <span class="price">$15</span>
-                <ul class="benifits">
-                  <li>
-                    <p>Up to 5 Website</p>
-                  </li>
-                  <li>
-                    <p>50 GB disk space</p>
-                  </li>
-                  <li>
-                    <p>10 Customize sub pages</p>
-                  </li>
-                  <li>
-                    <p>2 Domains access</p>
-                  </li>
-                  <li>
-                    <p>Support on request</p>
-                  </li>
-                </ul>
-                <a href="contact_us" class="btn white_btn">BUY NOW</a>
-              </div>
-            </div>
-
-            <!-- pricing box 2 -->
-            <div class="col-md-4">
-              <div class="pricing_block highlited_block">
-                <div class="icon">
-                  <img src="{{asset('frontend/images/unlimited.png')}}" alt="image" >
-                </div>
-                <div class="pkg_name">
-                  <h3>Unlimited</h3>
-                  <span>For the professionals</span>
-                </div>
-                <span class="price">$99</span>
-                <ul class="benifits">
-                  <li>
-                    <p>Unlimited Website</p>
-                  </li>
-                  <li>
-                    <p>200 GB disk space</p>
-                  </li>
-                  <li>
-                    <p>20 Customize sub pages</p>
-                  </li>
-                  <li>
-                    <p>10 Domains access</p>
-                  </li>
-                  <li>
-                    <p>24/7 Customer support</p>
-                  </li>
-                </ul>
-                <a href="contact_us" class="btn white_btn">BUY NOW</a>
-              </div>
-            </div>
-
-            <!-- pricing box 3 -->
-            <div class="col-md-4">
-              <div class="pricing_block">
-                <div class="icon">
-                  <img src="{{asset('frontend/images/premium.png')}}" alt="image" >
-                </div>
-                <div class="pkg_name">
-                  <h3>Premium</h3>
-                  <span>For small team</span>
-                </div>
-                <span class="price">$55</span>
-                <ul class="benifits">
-                  <li>
-                    <p>Up to 10 Website</p>
-                  </li>
-                  <li>
-                    <p>100 GB disk space</p>
-                  </li>
-                  <li>
-                    <p>15 Customize sub pages</p>
-                  </li>
-                  <li>
-                    <p>4 Domains access</p>
-                  </li>
-                  <li>
-                    <p>24/7 Customer support</p>
-                  </li>
-                </ul>
-                <a href="contact_us" class="btn white_btn">BUY NOW</a>
-              </div>
-            </div>
-          </div>
-          <!-- row end -->
-        </div>
-        <!-- pricing box monthly end -->
-
-        <!-- pricing box yearly start -->
-        <div class="pricing_pannel yearly_plan">
-          <div class="row">
-
-          	<!-- pricing box 1 -->
-            <div class="col-md-4">
-              <div class="pricing_block">
-                <div class="icon">
-                  <img src="{{asset('frontend/images/standard.png')}}" alt="image" >
-                </div>
-                <div class="pkg_name">
-                  <h3>Standard</h3>
-                  <span>For the basics</span>
-                </div>
-                <span class="price">$150</span>
-                <ul class="benifits">
-                  <li>
-                    <p>Up to 10 Website</p>
-                  </li>
-                  <li>
-                    <p>100 GB disk space</p>
-                  </li>
-                  <li>
-                    <p>25 Customize sub pages</p>
-                  </li>
-                  <li>
-                    <p>4 Domains access</p>
-                  </li>
-                  <li>
-                    <p>Support on request</p>
-                  </li>
-                </ul>
-                <a href="contact_us" class="btn white_btn">BUY NOW</a>
-              </div>
-            </div>
-
-            <!-- pricing box 2 -->
-            <div class="col-md-4">
-              <div class="pricing_block highlited_block">
-                <div class="icon">
-                  <img src="{{asset('frontend/images/unlimited.png')}}" alt="image" >
-                </div>
-                <div class="pkg_name">
-                  <h3>Unlimited</h3>
-                  <span>For the professionals</span>
-                </div>
-                <span class="price">$999</span>
-                <ul class="benifits">
-                  <li>
-                    <p>Unlimited Website</p>
-                  </li>
-                  <li>
-                    <p>400 GB disk space</p>
-                  </li>
-                  <li>
-                    <p>40 Customize sub pages</p>
-                  </li>
-                  <li>
-                    <p>20 Domains access</p>
-                  </li>
-                  <li>
-                    <p>24/7 Customer support</p>
-                  </li>
-                </ul>
-                <a href="contact_us" class="btn white_btn">BUY NOW</a>
-              </div>
-            </div>
-
-            <!-- pricing box 3 -->
-            <div class="col-md-4">
-              <div class="pricing_block">
-                <div class="icon">
-                  <img src="{{asset('frontend/images/premium.png')}}" alt="image" >
-                </div>
-                <div class="pkg_name">
-                  <h3>Premium</h3>
-                  <span>For small team</span>
-                </div>
-                <span class="price">$550</span>
-                <ul class="benifits">
-                  <li>
-                    <p>Up to 20 Website</p>
-                  </li>
-                  <li>
-                    <p>200 GB disk space</p>
-                  </li>
-                  <li>
-                    <p>25 Customize sub pages</p>
-                  </li>
-                  <li>
-                    <p>8 Domains access</p>
-                  </li>
-                  <li>
-                    <p>24/7 Customer support</p>
-                  </li>
-                </ul>
-                <a href="contact_us" class="btn white_btn">BUY NOW</a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <!-- pricing box yearly end -->
-
-        <p class="contact_text" data-aos="fade-up" data-aos-duration="1500">Not sure what to choose ? <a href="contact_us">contact us</a> for custom packages</p>
-      </div>
-      <!-- container start end -->
-    </section>
-    <!-- Pricing-Section end -->
 
     <!-- FAQ-Section start -->
     <section class="row_am faq_section">
@@ -941,7 +667,7 @@
     <section class="row_am free_app_section" id="getstarted">
     	<!-- container start -->
         <div class="container">
-            <div class="free_app_inner" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="100"> 
+            <div class="free_app_inner" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="100">
               <!-- vertical line animation -->
               <div class="anim_line dark_bg">
                 <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
@@ -1013,7 +739,7 @@
                     </div>
                     <div class="story_text">
                         <h3>Cool features added!</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting 
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting
                           industry lorem Ipsum has.</p>
                         <a href="blog-single.html">READ MORE</a>
                     </div>
@@ -1056,30 +782,7 @@
     </section>
     <!-- Story-Section-end --> --}}
 
-    <!-- News-Letter-Section-Start -->
-    <section class="newsletter_section">
-      <!-- container start -->
-      <div class="container">
-          <div class="newsletter_box">
-              <div class="section_title" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="100">
-              	  <!-- h2 -->
-                  <h2>Subscribe newsletter</h2>
-                  <!-- p -->
-                  <p>Be the first to recieve all latest post in your inbox</p>
-              </div>
-              <form action="#" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="100">
-                  <div class="form-group">
-                      <input type="email" class="form-control" placeholder="Enter your email">
-                  </div>
-                  <div class="form-group">
-                      <button class="btn">SUBMIT</button>
-                  </div>
-              </form>
-          </div>
-      </div>
-      <!-- container end -->
-    </section>
-    <!-- News-Letter-Section-end -->
+
 <!-- Footer-Section start -->
 <footer>
   <div class="top_footer" id="contact">
@@ -1102,7 +805,7 @@
             <!-- footer link 1 -->
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="abt_side">
-                  <div class="logo"> <img src="{{asset('frontend/images/footer_logo.png')}}" alt="image" ></div>
+                  <div class="logo"> <img src="{{asset('frontend/images/logo.png')}}" alt="image" ></div>
                   <ul>
                     <li><a href="#">support@example.com</a></li>
                     <li><a href="#">+1-900-123 4567</a></li>
@@ -1121,9 +824,9 @@
                 <div class="links">
                   <h3>Useful Links</h3>
                     <ul>
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">Privacy Policy</a></li>
-                      <li><a href="#">Terms & Conditions</a></li>
+                      <li><a href="{{config('global.base_path')}}">Home</a></li>
+                      <li><a href="privacy">Privacy Policy</a></li>
+                      <li><a href="terms">Terms & Conditions</a></li>
                     </ul>
                 </div>
             </div>
@@ -1134,7 +837,7 @@
                 <h3>Help & Suport</h3>
                   <ul>
                     <li><a href="faq">FAQs</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="contact_us">Contact Us</a></li>
                   </ul>
               </div>
             </div>
@@ -1168,12 +871,9 @@
     <!-- container start -->
       <div class="container">
         <!-- row start -->
-        <div class="row">
-          <div class="col-md-6">
-              <p>© Copyrights 2022. All rights reserved.</p>
-          </div>
-          <div class="col-md-6">
-              <p class="developer_text">Design & developed by <a href="https://themeforest.net/user/kalanidhithemes" target="blank">Kalanidhi Themes</a></p>
+        <div class="">
+          <div class="text-center ">
+              <p>© Copyrights <?php echo date('Y') ?>. All rights reserved.</p>
           </div>
       </div>
       <!-- row end -->
@@ -1198,11 +898,11 @@
       <div class="modal-body">
           <div id="video-container" class="video-container">
               <iframe id="youtubevideo" src="#" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-          </div>        
+          </div>
       </div>
       <div class="modal-footer">
       </div>
-  </div> 
+  </div>
 </div>
 </div>
 
@@ -1227,8 +927,3 @@
 
 <!-- Mirrored from kalanidhithemes.com/live-preview/landing-page/apper/all-demo/01-app-landing-page-defoult/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Nov 2022 11:36:11 GMT -->
 </html>
-<script>
-// Inline JavaScript to determine if the contact us page is open
-var isContactUsPage = window.location.pathname === '/contact-us';
-var headerClass = isContactUsPage ? 'white_header' : '';
-</script>

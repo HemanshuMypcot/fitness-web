@@ -10,7 +10,7 @@
 
       <div class="bred_text">
         <h1>Have questions? look here</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+        <p>A concise collection of commonly asked questions with brief answers, aiming to address common queries efficiently.</p>
         <ul>
           <li><a href="/">Home</a></li>
           <li><span>»</span></li>
@@ -33,15 +33,12 @@
             <div class="card-header" id="headingOne">
               <h2 class="mb-0">
                 <button type="button" class="btn btn-link active" data-toggle="collapse" data-target="#collapseOne">
-                  <i class="icon_faq icofont-plus"></i></i> How can i pay ?</button>
+                  <i class="icon_faq icofont-plus"></i></i> What types of fitness sessions does Studio SunLife offer ?</button>
               </h2>
             </div>
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
               <div class="card-body">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has. been the
-                  industrys standard dummy text ever since the when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book. It has survived not only five cen turies but also the
-                  leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p> Studio SunLife offers a range of fitness sessions including dance, kickboxing, yoga, HIIT, and more to cater to various preferences and fitness goals.</p>
               </div>
             </div>
           </div>
@@ -50,15 +47,12 @@
             <div class="card-header" id="headingTwo">
               <h2 class="mb-0">
                 <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
-                  data-target="#collapseTwo"><i class="icon_faq icofont-plus"></i></i> How to setup account ?</button>
+                  data-target="#collapseTwo"><i class="icon_faq icofont-plus"></i></i> How do I register for an activity on Studio Sunlife ?</button>
               </h2>
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
               <div class="card-body">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has. been the
-                  industrys standard dummy text ever since the when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book. It has survived not only five cen turies but also the
-                  leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p>To register for an activity, log in to your Studio Sunlife account and navigate to the 'Categories' section. Browse through the available activities, select the one you're interested in, and click on the 'Register' or 'Book Now' button to secure your spot.</p>
               </div>
             </div>
           </div>
@@ -67,16 +61,12 @@
             <div class="card-header" id="headingThree">
               <h2 class="mb-0">
                 <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
-                  data-target="#collapseThree"><i class="icon_faq icofont-plus"></i></i>What is process to get refund
-                  ?</button>
+                  data-target="#collapseThree"><i class="icon_faq icofont-plus"></i></i>How can I access fitness sessions on Stdio SunLife ?</button>
               </h2>
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
               <div class="card-body">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has. been the
-                  industrys standard dummy text ever since the when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book. It has survived not only five cen turies but also the
-                  leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p> Users can access fitness sessions through the Stdio SunLife app, available for download on both iOS and Android devices.</p>
               </div>
             </div>
           </div>
@@ -85,17 +75,14 @@
             <div class="card-header" id="headingFour">
               <h2 class="mb-0">
                 <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
-                  data-target="#collapseFour"><i class="icon_faq icofont-plus"></i></i>What is process to get refund ?
+                  data-target="#collapseFour"><i class="icon_faq icofont-plus"></i></i>Are there beginner-friendly sessions available for those new to fitness ?
                 </button>
               </h2>
             </div>
 
             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
               <div class="card-body">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has. been the
-                  industrys standard dummy text ever since the when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book. It has survived not only five cen turies but also the
-                  leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p> Yes, Studio SunLife offers beginner-friendly fitness sessions tailored to help users ease into their fitness journey comfortably.</p>
               </div>
             </div>
           </div>
@@ -104,17 +91,14 @@
             <div class="card-header" id="headingFive">
               <h2 class="mb-0">
                 <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
-                  data-target="#collapseFive"><i class="icon_faq icofont-plus"></i></i>Can i get code bug support for customization ?
+                  data-target="#collapseFive"><i class="icon_faq icofont-plus"></i></i>How frequently are new fitness sessions added to the platform ?
                 </button>
               </h2>
             </div>
 
             <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
               <div class="card-body">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has. been the
-                  industrys standard dummy text ever since the when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book. It has survived not only five cen turies but also the
-                  leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p>Studio SunLife continuously updates its library with new and exciting fitness sessions, ensuring users have access to a diverse range of workouts to keep their routine fresh and engaging.</p>
               </div>
             </div>
           </div>
@@ -123,40 +107,17 @@
             <div class="card-header" id="headingSix">
               <h2 class="mb-0">
                 <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
-                  data-target="#collapseSix"><i class="icon_faq icofont-plus"></i></i>Lorem Ipsum is simply dummy text of the printing and typesetting ?
+                  data-target="#collapseSix"><i class="icon_faq icofont-plus"></i></i>How secure is my personal data on Studio SunLife ?
                 </button>
               </h2>
             </div>
 
             <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
               <div class="card-body">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has. been the
-                  industrys standard dummy text ever since the when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book. It has survived not only five cen turies but also the
-                  leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p>Studio SunLife takes user privacy and data security seriously, employing robust measures to safeguard personal information in compliance with industry standards and regulations.</p>
               </div>
             </div>
           </div>
-
-          <div class="card" data-aos="fade-up" >
-            <div class="card-header" id="headingSeven">
-              <h2 class="mb-0">
-                <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
-                  data-target="#collapseSeven"><i class="icon_faq icofont-plus"></i></i>Lorem Ipsum is simply dummy text of the printing and typesetting ?
-                </button>
-              </h2>
-            </div>
-
-            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
-              <div class="card-body">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has. been the
-                  industrys standard dummy text ever since the when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book. It has survived not only five cen turies but also the
-                  leap into electronic typesetting, remaining essentially unchanged.</p>
-              </div>
-            </div>
-          </div>
-
 
         </div>
       </div>
@@ -210,28 +171,4 @@
   </section>
   <!-- Download-Free-App-section-end  -->
 
-  <!-- News-Letter-Section-Start -->
-  <section class="newsletter_section">
-    <!-- container start -->
-    <div class="container">
-      <div class="newsletter_box">
-        <div class="section_title" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="100">
-          <!-- h2 -->
-          <h2>Subscribe newsletter</h2>
-          <!-- p -->
-          <p>Be the first to recieve all latest post in your inbox</p>
-        </div>
-        <form action="#" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="100">
-          <div class="form-group">
-            <input type="email" class="form-control" placeholder="Enter your email">
-          </div>
-          <div class="form-group">
-            <button class="btn">SUBMIT</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <!-- container end -->
-  </section>
-  <!-- News-Letter-Section-end -->
   @endsection

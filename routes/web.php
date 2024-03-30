@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\PrivacyController;
+use App\Http\Controllers\TermsController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,8 +20,21 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::view('/','frontend/home');
-Route::view('contact_us','frontend/contact');
-Route::view('faq','frontend/faq');
-Route::view('privacy','frontend/privacy');
-Route::view('terms','frontend/terms');
+
+// Home Page
+Route::get("/",[HomeController::class,'index']);
+
+// Faq Page
+Route::get("faq",[FaqController::class,'index']);
+
+// Contact Page
+Route::get("contact_us",[ContactController::class,'index']);
+Route::post('contact_us', [ContactController::class,'storeContactForm'])->name('contact_us');
+
+// Privacy Page
+Route::get('privacy', [PrivacyController::class, 'fetchAndDisplayPrivacy']);
+// Route::get('privacy',[PrivacyController::class,'index']);
+
+// Terms Page
+Route::get('terms', [TermsController::class, 'fetchAndDisplayTerms']);
+// Route::get('terms',[TermsController::class,'index']);
