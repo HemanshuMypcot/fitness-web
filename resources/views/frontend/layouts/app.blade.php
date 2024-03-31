@@ -113,12 +113,6 @@
                                     <li><a href="mailto:{{config('global.email')}}">{{config('global.email')}}</a></li>
                                     <li><a href="tel:{{config('global.contact_no')}}">{{config('global.contact_no')}}</a></li>
                                 </ul>
-                                <ul class="social_media">
-                                    <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                                    <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                                    <li><a href="#"><i class="icofont-instagram"></i></a></li>
-                                    <li><a href="#"><i class="icofont-pinterest"></i></a></li>
-                                </ul>
                             </div>
                         </div>
 
