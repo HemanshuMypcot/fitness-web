@@ -359,3 +359,9 @@ $(document).ready(function(){
 
 AOS.init();
 
+
+var alertDiv = document.getElementById("alert");
+alertDiv.style.display = "block";
+setTimeout(function() {
+    alertDiv.style.display = "none";
+}, 3000);

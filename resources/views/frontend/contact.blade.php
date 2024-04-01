@@ -21,7 +21,7 @@
 
 
     <!-- Contact Us Section Start -->
-    <section class="contact_page_section">
+    <section class="contact_page_section mb-4">
       <div class="container">
           <div class="contact_inner">
               <div class="contact_form">
@@ -46,12 +46,6 @@
                   </form>
               </div>
               <div class="contact_info">
-                  <div class="icon"><img src="{{asset('frontend/images/contact_message_icon.png')}}" alt="image"></div>
-                  <div class="section_title">
-                    <h2>Have any <span>question?</span></h2>
-                    <p>If you have any question about our product, service, payment or company, Visit our <a href="faq">FAQs page.</a></p>
-                  </div>
-                  <a href="faq" class="btn puprple_btn">READ FAQ</a>
                   <ul class="contact_info_list">
                     <li>
                       <div class="img">
@@ -59,7 +53,7 @@
                       </div>
                       <div class="text">
                         <span>Email Us</span>
-                        <a href="mailto:{{config('global.email')}}">{{config('global.email')}}</a>
+                        <a href="mailto:{{$ContactContent['system_email']}}">{{$ContactContent['system_email']}}</a>
                       </div>
                     </li>
                     <li>
@@ -68,7 +62,7 @@
                       </div>
                       <div class="text">
                         <span>Call Us</span>
-                        <a href="tel:{{config('global.contact_no')}}">{{config('global.contact_no')}}</a>
+                        <a href="tel:{{$ContactContent['system_contact_no']}}">{{$ContactContent['system_contact_no']}}</a>
                       </div>
                     </li>
                     <li>
@@ -77,7 +71,7 @@
                       </div>
                       <div class="text">
                         <span>Visit Us</span>
-                        <p>{{config('global.company_address')}}</p>
+                        <p>{{$ContactContent['address']}}</p>
                       </div>
                     </li>
                   </ul>
@@ -88,7 +82,7 @@
     <!-- Contact Us Section End -->
 
 
-    <!-- Map Section Start -->
+    {{-- <!-- Map Section Start -->
     <section class="row_am map_section">
       <div class="container">
           <div class="map_inner">
@@ -96,6 +90,6 @@
           </div>
       </div>
     </section>
-    <!-- Map Section End -->
+    <!-- Map Section End --> --}}
 
 @endsection

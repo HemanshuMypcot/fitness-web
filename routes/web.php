@@ -22,13 +22,10 @@ use App\Http\Controllers\ContactController;
 // });
 
 // Home Page
-Route::get("/",[HomeController::class,'index']);
-
-// Faq Page
-Route::get("faq",[FaqController::class,'index']);
+Route::get("/",[HomeController::class,'fetchAndDisplayContact']);
 
 // Contact Page
-Route::get("contact_us",[ContactController::class,'index']);
+Route::get("contact_us",[ContactController::class,'fetchAndDisplayContact']);
 Route::post('contact_us', [ContactController::class,'storeContactForm'])->name('contact_us');
 
 // Privacy Page

@@ -23,14 +23,22 @@ class PrivacyController extends Controller
             ])
             ->json();
             // print_r($response);exit;
-
+        $response_2 = Http::withBasicAuth('admin', 'mypcot')
+        ->withHeaders([
+            'UUID' => $uuid,
+            'Platform' => $platform
+        ])
+        ->post('http://skyonliners.com/demo/fitness-studio/webservices/v1/contact/show')
+        ->json();
         if ($response) {
             $data = $response;
+            $data_1 = $response_2;
             $privacyContent = $data['data']['result']['content'];
+            $ContactContent = $data_1['data']['result'];
             $tags = config('global.meta_tags')['privacy_policy'];
 
 
-            return view('frontend.privacy', ['privacyContent' => $privacyContent, 'tags' => $tags]);
+            return view('frontend.privacy', ['privacyContent' => $privacyContent, 'tags' => $tags,'ContactContent'=>$ContactContent]);
         } else {
             return back()->with('error', 'Failed to fetch privacy policy.');
         }

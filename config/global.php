@@ -1,9 +1,6 @@
 <?php
 
 return [
-	'contact_no' => '+91-987-657 3556',
-	'email' => 'info@studiosunlife.com',
-	'company_address' => 'Sakinaka, Andheri',
 	'SEND_CUSTOM_EMAIL' => TRUE,
 	'EMAIL_FROM' => env('MAIL_FROM_ADDRESS', 'singharjun93124@gmail.com'),
 	'EMAIL_FROM_NAME' => env('MAIL_FROM_NAME', 'Singh Arjun'),
@@ -15,12 +12,6 @@ return [
 			"title" => "Studio Sunlife",
 			"keywords" => "Studio Sunlife: fitness session, kickboxing, dancing, yoga",
 			"description" => "Welcome to Studio Sunlife for an invigorating fitness session where you can unleash your inner warrior with kickboxing, groove to the rhythm with dancing, and find inner peace through yoga. With a variety of classes tailored to your preferences, embark on a journey to holistic well-being and vitality"
-		],
-		"faq" => [
-			"canonical" => env('BASE_URL').'faq',
-			"title" => "FAQs",
-			"keywords" => "strength training, cardio, flexibility, endurance, resistance training, plyometrics, functional training, circuit training, and bodyweight exercises",
-			"description" => "Discover the cornerstone elements of fitness training with our essential training like strength, cardio, flexibility, and endurance. Explore dynamic workouts like resistance training, ensuring a well-rounded approach to achieving your fitness goals"
 		],
 		"contact_us" => [
 			"canonical" => env('BASE_URL').'contact_us',

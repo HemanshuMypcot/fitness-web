@@ -32,7 +32,28 @@
 
     <!-- Page-wrapper-Start -->
     <div class="page_wrapper">
+        {{-- Alerts Design Start --}}
+        @if (session('success'))
+            <div class="alert" id="alert">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                    <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+                    <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
+                </svg>
+                {{session('success')}}
+            </div>
+        @endif
+        @if (session('error'))
+            <div class="alert" id="alert">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                    <circle class="path circle" fill="none" stroke="#D06079" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+                    <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3"/>
+                    <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4" y2="92.2"/>
+                </svg>
+                {{session('error')}}
+            </div>
+        @endif
 
+        {{-- Alerts Design End --}}
         <!-- Preloader -->
         <div id="preloader">
             <div id="loader"></div>
@@ -63,9 +84,6 @@
                             <!-- secondery menu start -->
                             <li class="nav-item">
                                 <a class="nav-link" href="/">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="faq">FAQs</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="contact_us">Contact Us</a>
@@ -110,8 +128,11 @@
                                 <div class="logo"> <img src="{{ asset('frontend/images/logo.png') }}" alt="image">
                                 </div>
                                 <ul>
-                                    <li><a href="mailto:{{config('global.email')}}">{{config('global.email')}}</a></li>
-                                    <li><a href="tel:{{config('global.contact_no')}}">{{config('global.contact_no')}}</a></li>
+                                    <li><a href="mailto:{{ $ContactContent['system_email']}}">{{ $ContactContent['system_email'] }}</a>
+                                    </li>
+                                    <li><a
+                                            href="tel:{{ $ContactContent['system_contact_no'] }}">{{$ContactContent['system_contact_no']}}</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -133,7 +154,6 @@
                             <div class="links">
                                 <h3>Help & Suport</h3>
                                 <ul>
-                                    <li><a href="faq">FAQs</a></li>
                                     <li><a href="contact_us">Contact Us</a></li>
                                 </ul>
                             </div>

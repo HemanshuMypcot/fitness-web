@@ -63,9 +63,6 @@
                 <a class="nav-link" href="{{config('global.base_path')}}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="faq">FAQs</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="contact_us">Contact Us</a>
               </li>
               <li class="nav-item">
@@ -124,16 +121,6 @@
               </li>
             </ul>
 
-            <!-- users -->
-            <div class="used_app">
-              <ul>
-                <li><img src="{{asset('frontend/images/used01.png')}}" alt="image" ></li>
-                <li><img src="{{asset('frontend/images/used02.png')}}" alt="image" ></li>
-                <li><img src="{{asset('frontend/images/used03.png')}}" alt="image" ></li>
-                <li><img src="{{asset('frontend/images/used04.png')}}" alt="image" ></li>
-              </ul>
-              <p>12M + <br> used this app</p>
-            </div>
           </div>
 
           <!-- banner slides start -->
@@ -170,69 +157,6 @@
       <!-- container end -->
     </section>
     <!-- Banner-Section-end -->
-
-    <!-- Trusted Section start -->
-    <section class="row_am trusted_section">
-      <!-- container start -->
-      <div class="container">
-        <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-          <!-- h2 -->
-          <h2>Trusted by <span>150+</span> companies</h2>
-          <!-- p -->
-          <p>Studio Sunlife to prioritize health and wellness with our trusted solutions. Experience <br> our tailored fitness programs designed for success.</p>
-        </div>
-
-        <!-- logos slider start -->
-        <div class="company_logos" >
-          <div id="company_slider" class="owl-carousel owl-theme">
-            <div class="item">
-              <div class="logo">
-                <img src="{{asset('frontend/images/paypal.png')}}" alt="image" >
-              </div>
-            </div>
-            <div class="item">
-              <div class="logo">
-                <img src="{{asset('frontend/images/spoty.png')}}" alt="image" >
-              </div>
-            </div>
-            <div class="item">
-              <div class="logo">
-                <img src="{{asset('frontend/images/shopboat.png')}}" alt="image" >
-              </div>
-            </div>
-            <div class="item">
-              <div class="logo">
-                <img src="{{asset('frontend/images/slack.png')}}" alt="image" >
-              </div>
-            </div>
-            <div class="item">
-              <div class="logo">
-                <img src="{{asset('frontend/images/envato.png')}}" alt="image" >
-              </div>
-            </div>
-            <div class="item">
-              <div class="logo">
-                <img src="{{asset('frontend/images/paypal.png')}}" alt="image" >
-              </div>
-            </div>
-            <div class="item">
-              <div class="logo">
-                <img src="{{asset('frontend/images/spoty.png')}}" alt="image" >
-              </div>
-            </div>
-            <div class="item">
-              <div class="logo">
-                <img src="{{asset('frontend/images/shopboat.png')}}" alt="image" >
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- logos slider end -->
-      </div>
-      <!-- container end -->
-    </section>
-    <!-- Trusted Section ends -->
-
 
     <!-- Features-Section-Start -->
     <section class="row_am features_section" id="features">
@@ -280,8 +204,8 @@
                 <img src="{{asset('frontend/images/live-chat.png')}}" alt="image" >
               </div>
               <div class="text">
-                <h4>Live chat</h4>
-                <p>Experience real-time support and guidance with Studio Sunlife's live chat feature, ensuring personalized assistance at your fingertips.</p>
+                <h4>Notifications</h4>
+                <p>Notifications to members about upcoming classes, schedule changes, promotions, or important announcements via email, SMS, or push notifications.</p>
               </div>
             </div>
 
@@ -291,7 +215,7 @@
                 <img src="{{asset('frontend/images/support.png')}}" alt="image" >
               </div>
               <div class="text">
-                <h4>24-7 Support</h4>
+                <h4>24/7 Support</h4>
                 <p>Experience unparalleled support with Studio Sunlife's round-the-clock assistance, ensuring you never face your fitness journey alone.</p>
               </div>
             </div>
@@ -375,9 +299,8 @@
                   <div class="app_icon">
                     <a href="#"><i class="icofont-brand-android-robot"></i></a>
                     <a href="#"><i class="icofont-brand-apple"></i></a>
-                    <a href="#"><i class="icofont-brand-windows"></i></a>
                   </div>
-                  <p>Download App either for Windows, Mac or Android</p>
+                  <p>Download App either for Mac or Android</p>
                 </div>
                 <div class="step_number">
                   <h3>01</h3>
@@ -391,8 +314,8 @@
               <li>
                 <div class="step_text" data-aos="fade-left" data-aos-duration="1500">
                   <h4>Create account</h4>
-                  <span>14 days free trial</span>
-                  <p>Sign up free for App account. One account for all devices.</p>
+                  <p>Sign up in App account. One account for all devices.</p>
+                  <p>Sign up in App account. One account for all devices.</p>
                 </div>
                 <div class="step_number">
                   <h3>02</h3>
@@ -406,7 +329,6 @@
               <li>
                 <div class="step_text" data-aos="fade-right" data-aos-duration="1500">
                   <h4>It’s done, enjoy the app</h4>
-                  <span>Have any questions check our <a href="faq">FAQs</a></span>
                   <p>Get most amazing app experience,Explore and share the app</p>
                 </div>
                 <div class="step_number">
@@ -420,43 +342,12 @@
           </div>
         </div>
 
-        <!-- video section start -->
-        <div class="yt_video" data-aos="fade-in" data-aos-duration="1500">
-         <!-- animation line -->
-          <div class="anim_line dark_bg">
-            <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-            <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-            <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-            <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-            <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-            <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-            <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-            <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-            <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-          </div>
-          <div class="thumbnil">
-            <img src="{{asset('frontend/images/yt_thumb.png')}}" alt="image" >
-            <a class="popup-youtube play-button" data-url="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" data-toggle="modal" data-target="#myModal" title="XJj2PbenIsU">
-              <span class="play_btn">
-                <img src="{{asset('frontend/images/play_icon.png')}}" alt="image" >
-                <div class="waves-block">
-                  <div class="waves wave-1"></div>
-                  <div class="waves wave-2"></div>
-                  <div class="waves wave-3"></div>
-                </div>
-              </span>
-              Let’s see virtually how it works
-              <span>Watch video</span>
-            </a>
-          </div>
-        </div>
-        <!-- video section end -->
       </div>
       <!-- container end -->
     </section>
     <!-- How-It-Workes-Section-end -->
 
-    <!-- Testimonial-Section start -->
+    {{-- <!-- Testimonial-Section start -->
     <section class="row_am testimonial_section">
       <!-- container start -->
       <div class="container">
@@ -553,66 +444,7 @@
       </div>
       <!-- container end -->
     </section>
-    <!-- Testimonial-Section end -->
-
-    <!-- FAQ-Section start -->
-    <section class="row_am faq_section">
-      <!-- container start -->
-      <div class="container">
-        <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-          <!-- h2 -->
-          <h2><span>FAQ</span> - Frequently Asked Questions</h2>
-          <!-- p -->
-          <p>Explore our FAQ for quick solutions to common inquiries about <br> Studio Fitness and our comprehensive offerings.</p>
-        </div>
-        <!-- faq data -->
-        <div class="faq_panel">
-          <div class="accordion" id="accordionExample">
-            <div class="card" data-aos="fade-up" data-aos-duration="1500">
-              <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                  <button type="button" class="btn btn-link active" data-toggle="collapse" data-target="#collapseOne">
-                  	<i class="icon_faq icofont-plus"></i></i> What makes Studio Sunlife unique ?</button>
-                </h2>
-              </div>
-              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>Studio Sunlife stands out with its tailored classes spanning various disciplines like dance and kickboxing and engaging challenges, offering a holistic fitness experience.</p>
-                </div>
-              </div>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-duration="1500">
-              <div class="card-header" id="headingTwo">
-                <h2 class="mb-0">
-                  <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
-                    data-target="#collapseTwo"><i class="icon_faq icofont-plus"></i></i> How do I register for an activity on Studio Sunlife ?</button>
-                </h2>
-              </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>To register for an activity, log in to your Studio Sunlife account and navigate to the 'Categories' section. Browse through the available activities, select the one you're interested in, and click on the 'Register' or 'Book Now' button to secure your spot.</p>
-                </div>
-              </div>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-duration="1500">
-              <div class="card-header" id="headingThree">
-                <h2 class="mb-0">
-                  <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
-                    data-target="#collapseThree"><i class="icon_faq icofont-plus"></i></i>What happens if I need to cancel my registration for an activity ?</button>
-                </h2>
-              </div>
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>If you need to cancel your registration for an activity, you can do so through the Studio Sunlife app or website. Navigate to your booked session if the session is ongoing so you can't cancel, find the one you wish to cancel, and follow the prompts to withdraw your registration.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- container end -->
-    </section>
-    <!-- FAQ-Section end -->
+    <!-- Testimonial-Section end --> --}}
 
     <!-- Beautifull-interface-Section start -->
     <section class="row_am interface_section">
@@ -620,7 +452,7 @@
       <div class="container-fluid">
         <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
             <!-- h2 -->
-            <h2>Beautifull <span>interface</span></h2>
+            <h2>Beautiful <span>interface</span></h2>
             <!-- p -->
             <p>
               Experience the allure of Studio Sunlife's beautiful interface, <br> meticulously crafted to enhance your fitness journey.
@@ -687,8 +519,7 @@
                         <div class="free_text">
                             <div class="section_title">
                                 <h2>Let’s download free from apple and play store</h2>
-                                <p>Instant free download from apple and play store orem Ipsum is simply dummy text of the printing.
-                                  and typese tting indus orem Ipsum has beenthe standard</p>
+                                <p>Download our free app from the Apple App Store and Google Play Store.</p>
                             </div>
                             <ul class="app_btn">
                               <li>
@@ -743,8 +574,8 @@
                 <div class="abt_side">
                   <div class="logo"> <img src="{{asset('frontend/images/logo.png')}}" alt="image" ></div>
                   <ul>
-                    <li><a href="mailto:{{config('global.email')}}">{{config('global.email')}}</a></li>
-                    <li><a href="tel:{{config('global.contact_no')}}">{{config('global.contact_no')}}</a></li>
+                    <li><a href="mailto:{{$ContactContent['system_email']}}">{{$ContactContent['system_email']}}</a></li>
+                    <li><a href="tel:{{$ContactContent['system_contact_no']}}">{{$ContactContent['system_contact_no']}}</a></li>
                   </ul>
                 </div>
             </div>
@@ -766,7 +597,6 @@
               <div class="links">
                 <h3>Help & Suport</h3>
                   <ul>
-                    <li><a href="faq">FAQs</a></li>
                     <li><a href="contact_us">Contact Us</a></li>
                   </ul>
               </div>
