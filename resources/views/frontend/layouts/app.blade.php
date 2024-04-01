@@ -86,13 +86,13 @@
                                 <a class="nav-link" href="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact_us">Contact Us</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="privacy">Privacy Policy</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="terms">Terms & Conditions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link dark_btn" href="contact_us">Contact Us</a>
                             </li>
                         </ul>
                     </div>
@@ -165,13 +165,13 @@
                                 <h3>Let’s Try Out</h3>
                                 <ul class="app_btn">
                                     <li>
-                                        <a href="#">
+                                        <a href="{{config('global.ios_app_link')}}">
                                             <img src="{{ asset('frontend/images/appstore_blue.png') }}"
                                                 alt="image">
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="{{config('global.android_app_link')}}">
                                             <img src="{{ asset('frontend/images/googleplay_blue.png') }}"
                                                 alt="image">
                                         </a>

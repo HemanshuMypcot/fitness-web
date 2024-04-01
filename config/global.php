@@ -1,6 +1,8 @@
 <?php
 
 return [
+	'android_app_link'=>'http://www.android.com',
+	'ios_app_link'=>'http://www.ios.com',
 	'SEND_CUSTOM_EMAIL' => TRUE,
 	'EMAIL_FROM' => env('MAIL_FROM_ADDRESS', 'singharjun93124@gmail.com'),
 	'EMAIL_FROM_NAME' => env('MAIL_FROM_NAME', 'Singh Arjun'),

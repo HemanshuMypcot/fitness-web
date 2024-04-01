@@ -63,13 +63,13 @@
                 <a class="nav-link" href="{{config('global.base_path')}}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact_us">Contact Us</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="privacy">Privacy Policy</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="terms">Terms & Conditions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link dark_btn" href="contact_us">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -108,13 +108,13 @@
             <!-- app buttons -->
             <ul class="app_btn">
               <li>
-                <a href="#">
+                <a href="{{config('global.android_app_link')}}">
                   <img class="blue_img" src="{{asset('frontend/images/appstore_blue.png')}}" alt="image" >
                   <img class="white_img" src="{{asset('frontend/images/appstore_white.png')}}" alt="image" >
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="{{config('global.ios_app_link')}}">
                   <img class="blue_img" src="{{asset('frontend/images/googleplay_blue.png')}}" alt="image" >
                   <img class="white_img" src="{{asset('frontend/images/googleplay_white.png')}}" alt="image" >
                 </a>
@@ -278,174 +278,6 @@
     <!-- About-App-Section-end -->
 
 
-    <!-- How-It-Workes-Section-Start -->
-    <section class="row_am how_it_works" id="how_it_work">
-      <!-- container start -->
-      <div class="container">
-        <div class="how_it_inner">
-          <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-          	<!-- h2 -->
-            <h2><span>How it works</span> - 3 easy steps</h2>
-            <!-- p -->
-            <p>Experience Studio Sunlife's seamless journey in 3 easy steps: Set your goals, <br> access personalized fitness plans, and engage in live virtual classes, empowering your path to wellness.</p>
-          </div>
-          <div class="step_block">
-          	<!-- UL -->
-            <ul>
-              <!-- step -->
-              <li>
-                <div class="step_text" data-aos="fade-right" data-aos-duration="1500">
-                  <h4>Download app</h4>
-                  <div class="app_icon">
-                    <a href="#"><i class="icofont-brand-android-robot"></i></a>
-                    <a href="#"><i class="icofont-brand-apple"></i></a>
-                  </div>
-                  <p>Download App either for Mac or Android</p>
-                </div>
-                <div class="step_number">
-                  <h3>01</h3>
-                </div>
-                <div class="step_img" data-aos="fade-left" data-aos-duration="1500">
-                  <img src="{{asset('frontend/images/download_app.jpg')}}" alt="image" >
-                </div>
-              </li>
-
-              <!-- step -->
-              <li>
-                <div class="step_text" data-aos="fade-left" data-aos-duration="1500">
-                  <h4>Create account</h4>
-                  <p>Sign up in App account. One account for all devices.</p>
-                  <p>Sign up in App account. One account for all devices.</p>
-                </div>
-                <div class="step_number">
-                  <h3>02</h3>
-                </div>
-                <div class="step_img" data-aos="fade-right" data-aos-duration="1500">
-                  <img src="{{asset('frontend/images/create_account.jpg')}}" alt="image" >
-                </div>
-              </li>
-
-              <!-- step -->
-              <li>
-                <div class="step_text" data-aos="fade-right" data-aos-duration="1500">
-                  <h4>It’s done, enjoy the app</h4>
-                  <p>Get most amazing app experience,Explore and share the app</p>
-                </div>
-                <div class="step_number">
-                  <h3>03</h3>
-                </div>
-                <div class="step_img" data-aos="fade-left" data-aos-duration="1500">
-                  <img src="{{asset('frontend/images/enjoy_app.jpg')}}" alt="image" >
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-      <!-- container end -->
-    </section>
-    <!-- How-It-Workes-Section-end -->
-
-    {{-- <!-- Testimonial-Section start -->
-    <section class="row_am testimonial_section">
-      <!-- container start -->
-      <div class="container">
-        <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-          <!-- h2 -->
-          <h2>What our <span>customer say</span></h2>
-          <!-- p -->
-          <p>Discover what our customers are saying about Studio Sunlife: 'Life-changing workouts,' <br> 'Unmatched support and motivation,</p>
-        </div>
-        <div class="testimonial_block" data-aos="fade-in" data-aos-duration="1500">
-          <div id="testimonial_slider" class="owl-carousel owl-theme">
-          	<!-- user 1 -->
-            <div class="item">
-              <div class="testimonial_slide_box">
-                <div class="rating">
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                </div>
-                <p class="review">
-                  “ Studio Sunlife has completely transformed our approach to employee wellness. The tailored programs and seamless user experience have been instrumental in boosting morale and productivity. ”
-                </p>
-                <div class="testimonial_img">
-                  <img src="{{asset('frontend/images/testimonial_user1.png')}}" alt="image" >
-                </div>
-                <h3>Shayna John</h3>
-                <span class="designation">Careative inc</span>
-              </div>
-            </div>
-
-            <!-- user 2 -->
-            <div class="item">
-              <div class="testimonial_slide_box">
-                <div class="rating">
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                </div>
-                <p class="review">
-                  “ I've tried various fitness apps, but Studio Sunlife stands out with its intuitive design and personalized workout plans. It's like having a personal trainer in my pocket!”
-                </p>
-                <div class="testimonial_img">
-                  <img src="{{asset('frontend/images/testimonial_user2.png')}}" alt="image" >
-                </div>
-                <h3>Willium Den</h3>
-                <span class="designation">Careative inc</span>
-              </div>
-            </div>
-
-            <!-- user 3 -->
-            <div class="item">
-              <div class="testimonial_slide_box">
-                <div class="rating">
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                  <span><i class="icofont-star"></i></span>
-                </div>
-                <p class="review">
-                  “ As a company, we prioritize employee well-being, and Fitness Sunlife has been an invaluable partner in achieving that goal. The platform's accessibility and comprehensive tracking features have garnered positive feedback from our entire team. ”
-                </p>
-                <div class="testimonial_img">
-                  <img src="{{asset('frontend/images/testimonial_user3.png')}}" alt="image" >
-                </div>
-                <h3>Cyrus Stephen</h3>
-                <span class="designation">Careative inc</span>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- total review -->
-          <div class="total_review">
-            <div class="rating">
-              <span><i class="icofont-star"></i></span>
-              <span><i class="icofont-star"></i></span>
-              <span><i class="icofont-star"></i></span>
-              <span><i class="icofont-star"></i></span>
-              <span><i class="icofont-star"></i></span>
-              <p>5.0 / 5.0</p>
-            </div>
-          </div>
-
-          <!-- avtar faces -->
-          <div class="avtar_faces">
-            <img src="{{asset('frontend/images/avtar_testimonial.png')}}" alt="image" >
-          </div>
-        </div>
-      </div>
-      <!-- container end -->
-    </section>
-    <!-- Testimonial-Section end --> --}}
-
     <!-- Beautifull-interface-Section start -->
     <section class="row_am interface_section">
 	  <!-- container start -->
@@ -474,7 +306,7 @@
               </div>
               <div class="item">
                 <div class="screen_frame_img">
-                    <img src="{{asset('frontend/images/fitness_screen3.png')}}" alt="image" >
+                    <img src="{{asset('frontend/images/fitness_screen8.png')}}" alt="image" >
                 </div>
               </div>
               <div class="item">
@@ -495,62 +327,6 @@
     </section>
     <!-- Beautifull-interface-Section end -->
 
-    <!-- Download-Free-App-section-Start  -->
-    <section class="row_am free_app_section" id="getstarted">
-    	<!-- container start -->
-        <div class="container">
-            <div class="free_app_inner" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="100">
-              <!-- vertical line animation -->
-              <div class="anim_line dark_bg">
-                <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-                <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-                <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-                <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-                <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-                <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-                <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-                <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-                <span><img src="{{asset('frontend/images/anim_line.png')}}" alt="anim_line"></span>
-              </div>
-              	<!-- row start -->
-                <div class="row">
-                	<!-- content -->
-                    <div class="col-md-6">
-                        <div class="free_text">
-                            <div class="section_title">
-                                <h2>Let’s download free from apple and play store</h2>
-                                <p>Download our free app from the Apple App Store and Google Play Store.</p>
-                            </div>
-                            <ul class="app_btn">
-                              <li>
-                                <a href="#">
-                                  <img src="{{asset('frontend/images/appstore_blue.png')}}" alt="image" >
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#">
-                                  <img src="{{asset('frontend/images/googleplay_blue.png')}}" alt="image" >
-                                </a>
-                              </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- images -->
-                    <div class="col-md-6">
-                        <div class="free_img">
-                            <img src="{{asset('frontend/images/download-screen01.png')}}" alt="image" >
-                            <img class="mobile_mockup" src="{{asset('frontend/images/download-screen02.png')}}" alt="image" >
-                        </div>
-                    </div>
-                </div>
-                <!-- row end -->
-            </div>
-        </div>
-        <!-- container end -->
-    </section>
-    <!-- Download-Free-App-section-end  -->
-<!-- Footer-Section start -->
 <footer>
   <div class="top_footer" id="contact">
     <!-- animation line -->
@@ -608,12 +384,12 @@
                   <h3>Let’s Try Out</h3>
                   <ul class="app_btn">
                     <li>
-                      <a href="#">
+                      <a href="{{config('global.ios_app_link')}}">
                         <img src="{{asset('frontend/images/appstore_blue.png')}}" alt="image" >
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="{{config('global.android_app_link')}}">
                         <img src="{{asset('frontend/images/googleplay_blue.png')}}" alt="image" >
                       </a>
                     </li>
@@ -648,23 +424,6 @@
 </footer>
 <!-- Footer-Section end -->
 
-<!-- VIDEO MODAL -->
-<div class="modal fade youtube-video" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-<div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <button id="close-video" type="button" class="button btn btn-default text-right" data-dismiss="modal">
-      <i class="icofont-close-line-circled"></i>
-    </button>
-      <div class="modal-body">
-          <div id="video-container" class="video-container">
-              <iframe id="youtubevideo" src="#" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-          </div>
-      </div>
-      <div class="modal-footer">
-      </div>
-  </div>
-</div>
-</div>
 
 <div class="purple_backdrop"></div>
 

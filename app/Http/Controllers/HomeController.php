@@ -35,7 +35,8 @@ class HomeController extends Controller
             $ContactContent = $data['data']['result'];
             $LinksContent = $data_2['data']['result'];
             $tags = config('global.meta_tags')['home'];
-
+            // echo "<pre>";
+            // print_r($LinksContent);exit;
             return view('frontend.home', ['ContactContent' => $ContactContent,'tags' => $tags,'LinksContent'=>$LinksContent]);
         } else {
 
