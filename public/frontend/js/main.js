@@ -359,9 +359,27 @@ $(document).ready(function(){
 
 AOS.init();
 
-
+// Alert JS
 var alertDiv = document.getElementById("alert");
 alertDiv.style.display = "block";
 setTimeout(function() {
     alertDiv.style.display = "none";
 }, 3000);
+
+// Validation JS
+function validateNameInput(input) {
+  var regex = /^[A-Za-z\s]+$/;
+  var inputValue = input.value.trim();
+  
+  if (!regex.test(inputValue)) {
+      input.value = inputValue.replace(/[^A-Za-z\s]/g, '');
+  }
+}
+function validateEmailInput(input) {
+  var regex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+  var inputValue = input.value.trim();
+  
+  if (!regex.test(inputValue)) {
+      inputValue = inputValue.replace(/[^A-Za-z0-9@._%+-]/g, '');
+  }
+}
