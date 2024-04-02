@@ -34,27 +34,16 @@
 <body>
     <!-- Page-wrapper-Start -->
     <div class="page_wrapper">
-        {{-- Alerts Design Start --}}
-        @if (session('success'))
-            <div class="alert" id="alert">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-                    <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
-                    <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
-                </svg>
-                {{session('success')}}
-            </div>
-        @endif
-        @if (session('error'))
-            <div class="alert" id="alert">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-                    <circle class="path circle" fill="none" stroke="#D06079" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
-                    <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3"/>
-                    <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4" y2="92.2"/>
-                </svg>
-                {{session('error')}}
-            </div>
-        @endif
 
+        <div id="liveToast" class="toast" role="alert"
+            aria-live="assertive" aria-atomic="true" style="z-index: 9999999999999;">
+            <div class="d-flex justify-content-between w-100">
+                <div class="toast-body text-white">
+                    Thank You! We Got Your Query, We Will Contact You Shortly..
+                </div>
+            </div>
+        </div>
+        
         {{-- Alerts Design End --}}
         <!-- Preloader -->
         <div id="preloader">
@@ -127,13 +116,15 @@
                         <!-- footer link 1 -->
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="abt_side">
-                                <div class="logo"> <img src="{{ asset('frontend/images/logo.png') }}" alt="image">
+                                <div class="logo"> <img src="{{ asset('frontend/images/logo.png') }}"
+                                        alt="image">
                                 </div>
                                 <ul>
-                                    <li><a href="mailto:{{ $ContactContent['system_email']}}">{{ $ContactContent['system_email'] }}</a>
+                                    <li><a
+                                            href="mailto:{{ $ContactContent['system_email'] }}">{{ $ContactContent['system_email'] }}</a>
                                     </li>
                                     <li><a
-                                            href="tel:{{ $ContactContent['system_contact_no'] }}">{{$ContactContent['system_contact_no']}}</a>
+                                            href="tel:{{ $ContactContent['system_contact_no'] }}">{{ $ContactContent['system_contact_no'] }}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -167,13 +158,13 @@
                                 <h3>Let’s Try Out</h3>
                                 <ul class="app_btn">
                                     <li>
-                                        <a href="{{config('global.ios_app_link')}}">
+                                        <a href="{{ config('global.ios_app_link') }}">
                                             <img src="{{ asset('frontend/images/appstore_blue.png') }}"
                                                 alt="image">
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{config('global.android_app_link')}}">
+                                        <a href="{{ config('global.android_app_link') }}">
                                             <img src="{{ asset('frontend/images/googleplay_blue.png') }}"
                                                 alt="image">
                                         </a>
@@ -209,46 +200,91 @@
         </footer>
         <!-- Footer-Section end -->
 
-        <!-- VIDEO MODAL -->
-        <div class="modal fade youtube-video" id="myModal" tabindex="-1" role="dialog"
-            aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <button id="close-video" type="button" class="button btn btn-default text-right"
-                        data-dismiss="modal">
-                        <i class="icofont-close-line-circled"></i>
-                    </button>
-                    <div class="modal-body">
-                        <div id="video-container" class="video-container">
-                            <iframe id="youtubevideo" src="#" width="640" height="360" frameborder="0"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Page-wrapper-End -->
 
-        <div class="purple_backdrop"></div>
+        <!-- Jquery-js-Link -->
+        <script src="{{ asset('frontend/js/jquery.js') }}"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    </div>
-    <!-- Page-wrapper-End -->
+        <!-- owl-js-Link -->
+        <script src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>
+        <!-- bootstrap-js-Link -->
+        <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
+        <!-- aos-js-Link -->
+        <script src="{{ asset('frontend/js/aos.js') }}"></script>
+        <!-- main-js-Link -->
+        <script src="{{ asset('frontend/js/main.js') }}"></script>
+        {{--  --}}
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const form = document.getElementById('contactForm');
+                const toast = new bootstrap.Toast(document.getElementById('liveToast'));
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    const formData = new FormData(form);
+                    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+                    fetch(form.action, {
+                            method: 'POST',
+                            headers: {
+                                'X-CSRF-TOKEN': csrfToken,
+                            },
+                            body: formData,
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                toast.show();
+                            } else if (data.error) {}
+                        })
+                        .catch(error => {});
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                $('#contactBtn').click(function() {
+                    event.preventDefault();
+                    $.ajax({
+                        url: $('#contactForm').attr('action'),
+                        type: 'POST',
+                        data: $('#contactForm').serialize(),
+                        success: function(response) {
+                            if (response.success) {
+                                $('#liveToast .toast-body').text('Thank You! We Got Your Query');
+                                $('#liveToast').removeClass('bg-danger').addClass('bg-success');
+                                $('#liveToast').toast('show');
 
-    <!-- Jquery-js-Link -->
-    <script src="{{ asset('frontend/js/jquery.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                                // Clear form fields
+                                $('#contactForm')[0].reset();
 
-    <!-- owl-js-Link -->
-    <script src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>
-    <!-- bootstrap-js-Link -->
-    <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
-    <!-- aos-js-Link -->
-    <script src="{{ asset('frontend/js/aos.js') }}"></script>
-    <!-- main-js-Link -->
-    <script src="{{ asset('frontend/js/main.js') }}"></script>
-    {{--  --}}
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+                                // Set a timeout to hide the toast after 3 seconds
+                                setTimeout(function() {
+                                    $('#liveToast').toast('hide');
+                                }, 3000);
+                            } else if (response.error) {
+                                $('#liveToast .toast-body').text(response.error);
+                                $('#liveToast').removeClass('bg-success').addClass('bg-danger');
+                                $('#liveToast').toast('show');
+
+                            } else {
+                                if (response.success == 0 && response.message.length) {
+                                    $('#liveToast .toast-body').text(response.message);
+                                    $('#liveToast').removeClass('bg-success').addClass('bg-danger');
+                                    $('#liveToast').toast('show');
+                                }
+                            }
+                        },
+                        error: function(xhr, status, error, response) {
+                            $('#liveToast .toast-body').text("Alert: "+xhr.responseJSON.message);
+                            $('#liveToast').removeClass('bg-success').addClass('bg-danger');
+                            $('#liveToast').toast('show');
+
+                        }
+                    });
+                });
+            });
+        </script>
 </body>
 
 

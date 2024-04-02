@@ -3597,3 +3597,15 @@ svg {
         margin: 20px auto 0;
     }
 }
+#liveToast {
+    margin-top: 2%;
+    margin-right: 2%;
+    max-width: fit-content;
+    background-color: white;
+    color: black; /* Changed to black for better visibility */
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+

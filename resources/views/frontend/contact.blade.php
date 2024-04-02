@@ -32,16 +32,16 @@
                   <form action="{{ route('contact_us') }}" method="post" id="contactForm">
                     @csrf
                     <div class="form-group">
-                      <input type="text" placeholder="Name" name="name" class="form-control" oninput="validateNameInput(this)">
+                      <input type="text" placeholder="Name" name="name" class="form-control" oninput="validateNameInput(this)" required>
                     </div>
                     <div class="form-group">
-                      <input type="email" placeholder="Email" name="email" class="form-control" oninput="validateEmailInput(this)">
+                      <input type="email" placeholder="Email" name="email" class="form-control" oninput="validateEmailInput(this)" required>
                     </div>
                     <div class="form-group">
                       <textarea class="form-control" name="message" placeholder="Your message"></textarea>
                     </div>
                     <div class="form-group mb-0">
-                        <button type="submit" class="btn puprple_btn" onclick="submitForm('contactForm','post');">SEND MESSAGE</button>
+                        <button type="submit" class="btn puprple_btn" id="contactBtn">SEND MESSAGE</button>
                     </div>
                   </form>
               </div>

@@ -5,16 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Config;
+use App\Http\Requests\ContactUsRequest;
 
 class ContactController extends Controller
 {
-    public function storeContactForm(Request $request)
+    public function storeContactForm(ContactUsRequest $request)
     {
-        $validateData = $request->validate([
-            "name" => "required|string|max:255",
-            "email" => "required|email|max:255",
-            "message" => "nullable|max:255",
-        ]);
+        $validateData = $request->all();
 
         $body = [
             "name" => $validateData['name'],
@@ -33,10 +30,10 @@ class ContactController extends Controller
 
         if ($response) {
 
-            return redirect('contact_us')->with('success', 'Message Submitted Successfulyy!!');
+            return response()->json(['success' => $response], 200);
         } else {
 
-            return redirect()->with('error', 'Something went wrong');
+            return response()->json(['error' => 'Error submitting form.'], 500);
         }
     }
 
