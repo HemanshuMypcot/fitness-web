@@ -3515,10 +3515,9 @@ header.fix_style.white_header {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #ffeab2;
-    /* background:linear-gradient(45deg, #ffffcc,#e07141); */
     padding: 10px;
     border: 1px solid #ffeab2;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 9999;
     display: none;
     border-radius: 10px;
@@ -3584,4 +3583,17 @@ svg {
       stroke-dashoffset: 900;
     }
   }
-  
+  /* Media Query for Mobile */
+@media only screen and (max-width: 768px) {
+    .alert {
+        top: 30%;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+
+    svg {
+        width: 80px;
+        margin: 20px auto 0;
+    }
+}
