@@ -179,6 +179,7 @@ body {
 .page_wrapper {
     width: 100%;
     overflow-x: hidden;
+
 }
 
 a {
@@ -2448,7 +2449,7 @@ header.fix_style.white_header {
     display: flex;
     align-items: center;
     position: relative;
-    margin-top: -96px;
+    margin-top: -106px;
 }
 
 .bred_crumb::after {

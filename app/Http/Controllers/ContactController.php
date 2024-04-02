@@ -4,15 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Config;
 
 class ContactController extends Controller
 {
-    function index()
-    {
-        $data['tags'] = config('global.meta_tags')['contact_us'];
-        return view("frontend/contact", $data);
-    }
-
     public function storeContactForm(Request $request)
     {
         $validateData = $request->validate([
@@ -27,12 +22,13 @@ class ContactController extends Controller
             "message" => $validateData['message']
         ];
 
-        $uuid = '134657985';
-        $platform = 'web';
+        $uuid =Config::get('global.uuid');
+        $platform = Config::get('global.platform');
+        $api_path=Config::get('global.api_path');
 
         $response = Http::withBasicAuth('admin', 'mypcot')
             ->withHeaders(['UUID' => $uuid, 'Platform' => $platform])
-            ->post('http://skyonliners.com/demo/fitness-studio/webservices/v1/contact/create', $body)
+            ->post($api_path.'/contact/create', $body)
             ->json();
 
         if ($response) {
@@ -59,8 +55,6 @@ class ContactController extends Controller
             $data = $response;
             $ContactContent = $data['data']['result'];
             $tags = config('global.meta_tags')['contact_us'];
-            // echo "<pre>";
-            // print_r($ContactContent['system_email']);exit;
 
             return view('frontend.contact', ['ContactContent' => $ContactContent,'tags' => $tags]);
         } else {

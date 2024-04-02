@@ -10,7 +10,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $tags['title'] }}</title>
-
+    {{-- Meta tags --}}
+    <meta name="keywords" content="{{ $tags['keywords'] }}">
+    <link rel="canonical" href="{{ $tags['canonical'] }}" />
+    <meta name="description" content="{{ $tags['description'] }}">
     <!-- icofont-css-link -->
     <link rel="stylesheet" href="{{ asset('frontend/css/icofont.min.css') }}">
     <!-- Owl-Carosal-Style-link -->
@@ -29,7 +32,6 @@
 </head>
 
 <body>
-
     <!-- Page-wrapper-Start -->
     <div class="page_wrapper">
         {{-- Alerts Design Start --}}
@@ -60,7 +62,7 @@
         </div>
 
         <!-- Header Start -->
-        <header style="margin-top: -20px">
+        <header style="margin-top: -10px">
             <!-- container start -->
             <div class="container">
                 <!-- navigation bar -->
@@ -192,7 +194,7 @@
                     <!-- row start -->
                     <div class="">
                         <div class="text-center">
-                            <p>© Copyrights <?php echo date('Y'); ?>. All rights reserved.</p>
+                            <p>Copyrights &copy; <?php echo date('Y'); ?>. All rights reserved by Studio Sunlife.</p>
                         </div>
                     </div>
                     <!-- row end -->
