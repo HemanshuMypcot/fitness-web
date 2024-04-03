@@ -14,12 +14,13 @@ class TermsController extends Controller
         $uuid =Config::get('global.uuid');
         $platform = Config::get('global.platform');
         $api_path=Config::get('global.api_path');
+        
         $response = Http::withBasicAuth('admin', 'mypcot')
             ->withHeaders([
                 'UUID' => $uuid,
                 'Platform' => $platform
             ])
-            ->post('http://skyonliners.com/demo/fitness-studio/webservices/v1/policies', [
+            ->post($api_path.'/policies', [
                 'type' => 'terms'
             ])
             ->json();

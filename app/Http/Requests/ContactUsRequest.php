@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\ValidationException;
 
 class ContactUsRequest extends FormRequest
 {
@@ -28,6 +30,18 @@ class ContactUsRequest extends FormRequest
             "email" => "required|email|max:255",
             "message" => "nullable|max:255",
         ];
+    }
+
+    protected function failedValidation(Validator $validator)
+    {
+        $response = response()->json([
+            'success' => 0,
+            'message' => $validator->errors()->all()
+        ]);
+ 
+        throw (new ValidationException($validator, $response))
+            ->errorBag($this->errorBag)
+            ->redirectTo($this->getRedirectUrl());
     }
  
     /**

@@ -110,66 +110,66 @@ $('#screen_slider').owlCarousel({
 
 
 // Number Count
-// window.addEventListener('scroll', function() {
-// 	var element = document.querySelector('#counter');
-// 	var position = element.getBoundingClientRect();
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#counter');
+	var position = element.getBoundingClientRect();
 
-// 	// checking whether fully visible
-// 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-//     $('.counter-value').each(function() {
-//       var $this = $(this),
-//         countTo = $this.attr('data-count');
-//       $({
-//         countNum: $this.text()
-//       }).animate({
-//           countNum: countTo
-//         },
+	// checking whether fully visible
+	if(position.top >= 0 && position.bottom <= window.innerHeight) {
+    $('.counter-value').each(function() {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
 
-//         {
+        {
 
-//           duration: 2000,
-//           easing: 'swing',
-//           step: function() {
-//             $this.text(Math.floor(this.countNum));
-//           },
-//           complete: function() {
-//             $this.text(this.countNum);
-//             //alert('finished');
-//           }
+          duration: 2000,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+            //alert('finished');
+          }
 
-//         });
-//     });
-// 	}
+        });
+    });
+	}
 
-// 	if(position.top < window.innerHeight && position.bottom >= 0) {
-// 		//console.log('Element is partially visible in screen');
-// 	}else{
-//     //console.log('Element is not visible');
-//     $('.counter-value').each(function() {
-//       var $this = $(this),
-//         countTo = 0;
-//       $({
-//         countNum: $this.text()
-//       }).animate({
-//           countNum: countTo
-//         },
+	if(position.top < window.innerHeight && position.bottom >= 0) {
+		//console.log('Element is partially visible in screen');
+	}else{
+    //console.log('Element is not visible');
+    $('.counter-value').each(function() {
+      var $this = $(this),
+        countTo = 0;
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
 
-//         {
+        {
 
-//           duration: 100,
-//           easing: 'swing',
-//           step: function() {
-//             $this.text(Math.floor(this.countNum));
-//           },
-//           complete: function() {
-//             $this.text(this.countNum);
-//             //alert('finished');
-//           }
+          duration: 100,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+            //alert('finished');
+          }
 
-//         });
-//     });
-//   }
-// });
+        });
+    });
+  }
+});
 
 
 

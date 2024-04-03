@@ -30,7 +30,7 @@ class PrivacyController extends Controller
                 'UUID' => $uuid,
                 'Platform' => $platform
             ])
-            ->post('http://skyonliners.com/demo/fitness-studio/webservices/v1/contact/show')
+            ->post($api_path.'/contact/show')
             ->json();
         if ($response) {
             $data = $response;

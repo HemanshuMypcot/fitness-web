@@ -35,15 +35,15 @@
     <!-- Page-wrapper-Start -->
     <div class="page_wrapper">
 
-        <div id="liveToast" class="toast" role="alert"
-            aria-live="assertive" aria-atomic="true" style="z-index: 9999999999999;">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+            style="z-index: 9999999999999;">
             <div class="d-flex justify-content-between w-100">
                 <div class="toast-body text-white">
                     Thank You! We Got Your Query, We Will Contact You Shortly..
                 </div>
             </div>
         </div>
-        
+
         {{-- Alerts Design End --}}
         <!-- Preloader -->
         <div id="preloader">
@@ -63,7 +63,6 @@
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon">
-                            <!-- <i class="icofont-navigation-menu ico_menu"></i> -->
                             <div class="toggle-wrap">
                                 <span class="toggle-bar"></span>
                             </div>
@@ -116,8 +115,7 @@
                         <!-- footer link 1 -->
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="abt_side">
-                                <div class="logo"> <img src="{{ asset('frontend/images/logo.png') }}"
-                                        alt="image">
+                                <div class="logo"> <img src="{{ asset('frontend/images/logo.png') }}" alt="image">
                                 </div>
                                 <ul>
                                     <li><a
@@ -215,71 +213,66 @@
         <!-- main-js-Link -->
         <script src="{{ asset('frontend/js/main.js') }}"></script>
         {{--  --}}
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const form = document.getElementById('contactForm');
-                const toast = new bootstrap.Toast(document.getElementById('liveToast'));
-                form.addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    const formData = new FormData(form);
-                    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-                    fetch(form.action, {
-                            method: 'POST',
-                            headers: {
-                                'X-CSRF-TOKEN': csrfToken,
-                            },
-                            body: formData,
-                        })
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data.success) {
-                                toast.show();
-                            } else if (data.error) {}
-                        })
-                        .catch(error => {});
-                });
-            });
-        </script>
+
         <script>
             $(document).ready(function() {
                 $('#contactBtn').click(function() {
                     event.preventDefault();
+                    // Disable the button to prevent multiple submissions
+                    $(this).prop('disabled', true);
                     $.ajax({
                         url: $('#contactForm').attr('action'),
                         type: 'POST',
                         data: $('#contactForm').serialize(),
                         success: function(response) {
+                            console.log(response);
                             if (response.success) {
                                 $('#liveToast .toast-body').text('Thank You! We Got Your Query');
                                 $('#liveToast').removeClass('bg-danger').addClass('bg-success');
+                                $('#liveToast').css("display", "block") // Added
                                 $('#liveToast').toast('show');
-
                                 // Clear form fields
                                 $('#contactForm')[0].reset();
 
-                                // Set a timeout to hide the toast after 3 seconds
-                                setTimeout(function() {
-                                    $('#liveToast').toast('hide');
-                                }, 3000);
+                                setTimeout(() => {
+                                    $('#liveToast').css("display", "none")
+                                }, 2000);
+
                             } else if (response.error) {
                                 $('#liveToast .toast-body').text(response.error);
                                 $('#liveToast').removeClass('bg-success').addClass('bg-danger');
+                                $('#liveToast').css("display", "block") // Added
                                 $('#liveToast').toast('show');
 
+                                setTimeout(() => {
+                                    $('#liveToast').css("display", "none")
+                                }, 2000);
                             } else {
                                 if (response.success == 0 && response.message.length) {
                                     $('#liveToast .toast-body').text(response.message);
                                     $('#liveToast').removeClass('bg-success').addClass('bg-danger');
+                                    $('#liveToast').css("display", "block") // Added
                                     $('#liveToast').toast('show');
+
+                                    setTimeout(() => {
+                                        $('#liveToast').css("display", "none")
+                                    }, 2000);
                                 }
                             }
                         },
                         error: function(xhr, status, error, response) {
-                            $('#liveToast .toast-body').text("Alert: "+xhr.responseJSON.message);
+                            $('#liveToast .toast-body').text("Alert: " + xhr.responseJSON.message);
                             $('#liveToast').removeClass('bg-success').addClass('bg-danger');
+                            $('#liveToast').css("display", "block")
                             $('#liveToast').toast('show');
 
+                            setTimeout(() => {
+                                $('#liveToast').css("display", "none")
+                            }, 2000);
+                        },
+                        complete: function() {
+                            // Re-enable the button after the request completes
+                            $('#contactBtn').prop('disabled', false);
                         }
                     });
                 });
