@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- Mirrored from kalanidhithemes.com/live-preview/landing-page/apper/all-demo/01-app-landing-page-defoult/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Nov 2022 11:34:52 GMT -->
-
 <head>
 
     <meta charset="UTF-8">
@@ -183,7 +180,7 @@
                     <!-- row start -->
                     <div class="">
                         <div class="text-center">
-                            <p>Copyrights &copy; <?php echo date('Y'); ?>. All rights reserved by Studio Sunlife.</p>
+                            <p>Copyrights &copy; {{Date('Y')}} All rights reserved by Studio Sunlife.</p>
                         </div>
                     </div>
                     <!-- row end -->
@@ -212,75 +209,6 @@
         <script src="{{ asset('frontend/js/aos.js') }}"></script>
         <!-- main-js-Link -->
         <script src="{{ asset('frontend/js/main.js') }}"></script>
-        {{--  --}}
 
-        <script>
-            $(document).ready(function() {
-                $('#contactBtn').click(function() {
-                    event.preventDefault();
-                    // Disable the button to prevent multiple submissions
-                    $(this).prop('disabled', true);
-                    $.ajax({
-                        url: $('#contactForm').attr('action'),
-                        type: 'POST',
-                        data: $('#contactForm').serialize(),
-                        success: function(response) {
-                            console.log(response);
-                            if (response.success) {
-                                $('#liveToast .toast-body').text('Thank You! We Got Your Query');
-                                $('#liveToast').removeClass('bg-danger').addClass('bg-success');
-                                $('#liveToast').css("display", "block") // Added
-                                $('#liveToast').toast('show');
-                                // Clear form fields
-                                $('#contactForm')[0].reset();
-
-                                setTimeout(() => {
-                                    $('#liveToast').css("display", "none")
-                                }, 2000);
-
-                            } else if (response.error) {
-                                $('#liveToast .toast-body').text(response.error);
-                                $('#liveToast').removeClass('bg-success').addClass('bg-danger');
-                                $('#liveToast').css("display", "block") // Added
-                                $('#liveToast').toast('show');
-
-                                setTimeout(() => {
-                                    $('#liveToast').css("display", "none")
-                                }, 2000);
-                            } else {
-                                if (response.success == 0 && response.message.length) {
-                                    $('#liveToast .toast-body').text(response.message);
-                                    $('#liveToast').removeClass('bg-success').addClass('bg-danger');
-                                    $('#liveToast').css("display", "block") // Added
-                                    $('#liveToast').toast('show');
-
-                                    setTimeout(() => {
-                                        $('#liveToast').css("display", "none")
-                                    }, 2000);
-                                }
-                            }
-                        },
-                        error: function(xhr, status, error, response) {
-                            $('#liveToast .toast-body').text("Alert: " + xhr.responseJSON.message);
-                            $('#liveToast').removeClass('bg-success').addClass('bg-danger');
-                            $('#liveToast').css("display", "block")
-                            $('#liveToast').toast('show');
-
-                            setTimeout(() => {
-                                $('#liveToast').css("display", "none")
-                            }, 2000);
-                        },
-                        complete: function() {
-                            // Re-enable the button after the request completes
-                            $('#contactBtn').prop('disabled', false);
-                        }
-                    });
-                });
-            });
-        </script>
 </body>
-
-
-<!-- Mirrored from kalanidhithemes.com/live-preview/landing-page/apper/all-demo/01-app-landing-page-defoult/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Nov 2022 11:36:11 GMT -->
-
 </html>

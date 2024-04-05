@@ -84,30 +84,4 @@
         </div>
     </section>
     <!-- Contact Us Section End -->
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('contactForm');
-            const toast = new bootstrap.Toast(document.getElementById('liveToast'));
-            form.addEventListener('submit', function(event) {
-                event.preventDefault();
-                const formData = new FormData(form);
-                const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-                fetch(form.action, {
-                        method: 'POST',
-                        headers: {
-                            'X-CSRF-TOKEN': csrfToken,
-                        },
-                        body: formData,
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            toast.show();
-                        } else if (data.error) {}
-                    })
-                    .catch(error => {});
-            });
-        });
-    </script>
 @endsection

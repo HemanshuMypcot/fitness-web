@@ -1,10 +1,7 @@
 
 /*
-
 Project Name : Studio Sunlife JS
-
 Created By : Hemanshu Solanki from Mypcot
-
 */
 // Open Sub Menu
 $('.drp_btn').click(function(){
@@ -108,71 +105,6 @@ $('#screen_slider').owlCarousel({
     }
 })
 
-
-// Number Count
-window.addEventListener('scroll', function() {
-	var element = document.querySelector('#counter');
-	var position = element.getBoundingClientRect();
-
-	// checking whether fully visible
-	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-    $('.counter-value').each(function() {
-      var $this = $(this),
-        countTo = $this.attr('data-count');
-      $({
-        countNum: $this.text()
-      }).animate({
-          countNum: countTo
-        },
-
-        {
-
-          duration: 2000,
-          easing: 'swing',
-          step: function() {
-            $this.text(Math.floor(this.countNum));
-          },
-          complete: function() {
-            $this.text(this.countNum);
-            //alert('finished');
-          }
-
-        });
-    });
-	}
-
-	if(position.top < window.innerHeight && position.bottom >= 0) {
-		//console.log('Element is partially visible in screen');
-	}else{
-    //console.log('Element is not visible');
-    $('.counter-value').each(function() {
-      var $this = $(this),
-        countTo = 0;
-      $({
-        countNum: $this.text()
-      }).animate({
-          countNum: countTo
-        },
-
-        {
-
-          duration: 100,
-          easing: 'swing',
-          step: function() {
-            $this.text(Math.floor(this.countNum));
-          },
-          complete: function() {
-            $this.text(this.countNum);
-            //alert('finished');
-          }
-
-        });
-    });
-  }
-});
-
-
-
 // Pricing Section Year Month Jquery
 $(document).ready(function () {
 
@@ -187,47 +119,6 @@ $(document).ready(function () {
     })
 
   });
-
-  $(document).ready(function () {
-    // Add minus icon for collapse element which is open by default
-    $(".collapse.show").each(function () {
-      $(this)
-        .prev(".card-header")
-        .find(".icon_faq")
-        .addClass("icofont-minus")
-        .removeClass("icofont-plus");
-    });
-
-
-    // Toggle plus minus icon on show hide of collapse element
-    $(".collapse").on("show.bs.collapse", function () {
-        $(this).prev(".card-header").find(".icon_faq").removeClass("icofont-plus").addClass("icofont-minus");
-      })
-      .on("hide.bs.collapse", function () {
-        $(this).prev(".card-header").find(".icon_faq").removeClass("icofont-minus").addClass("icofont-plus");
-      });
-
-      $(".collapse").on("show.bs.collapse", function () {
-        $(this).prev(".card-header").children('h2').children('.btn').addClass("active");
-      })
-      .on("hide.bs.collapse", function () {
-        $(this).prev(".card-header").children('h2').children('.btn').removeClass("active");
-      });
-  });
-
-
-// Download Section Hover Jquery
-// window.addEventListener('scroll', function() {
-// 	var element = document.querySelector('.free_text');
-// 	var position = element.getBoundingClientRect();
-
-// 	if(position.top < window.innerHeight && position.bottom >= 0) {
-//     $('.purple_backdrop').css("opacity", "1");
-// 	}else{
-//     //console.log('Element is not visible');
-//     $('.purple_backdrop').css("opacity", "0");
-//   }
-// });
 
 $(window).on('resize', function() {
   if ($(window).width()<768) {
@@ -302,25 +193,6 @@ $(window).scroll(function(){
   }
 });
 
-
-
-
-//YOUTUBE VIDEO
-$('.play-button').click(function(e){
-  var iframeEl = $('<iframe>', { src: $(this).data('url') });
-  $('#youtubevideo').attr('src', $(this).data('url'));
-})
-
-$('#close-video').click(function(e){
-  $('#youtubevideo').attr('src', '');
-});
-
-$(document).on('hidden.bs.modal','#myModal', function () {
-  $('#youtubevideo').attr('src', '');
-});
-
-
-
 // Close btn on click
 
 $(document).ready(function(){
@@ -365,3 +237,41 @@ function validateEmailInput(input) {
 }
 
 // Submission Ajax
+$('#contactBtn').click(function(event) {
+  event.preventDefault();
+  const contactForm = $('#contactForm');
+  const liveToast = $('#liveToast');
+  const contactBtn = $(this);
+  contactBtn.prop('disabled', true);
+
+  $.ajax({
+      url: contactForm.attr('action'),
+      type: 'POST',
+      data: contactForm.serialize(),
+  })
+  .done(function(response) {
+      const toastBody = liveToast.find('.toast-body');
+      const toast = liveToast.toast();
+
+      if (response.success) {
+          toastBody.text('Thank You! We Got Your Query');
+          liveToast.removeClass('bg-danger').addClass('bg-success').css('display', 'block');
+      } else {
+          toastBody.text(response.error || response.message);
+          liveToast.removeClass('bg-success').addClass('bg-danger').css('display', 'block');
+      }
+
+      toast.toast('show');
+      setTimeout(() => liveToast.css('display', 'none'), 2000);
+  })
+  .fail(function(xhr, status, error) {
+      const toastBody = liveToast.find('.toast-body');
+      toastBody.text("Alert: " + xhr.responseJSON.message);
+      liveToast.removeClass('bg-success').addClass('bg-danger').css('display', 'block');
+      liveToast.toast('show');
+      setTimeout(() => liveToast.css('display', 'none'), 2000);
+  })
+  .always(function() {
+      contactBtn.prop('disabled', false);
+  });
+});
